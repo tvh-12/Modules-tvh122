@@ -1,4 +1,4 @@
-# All-in-One
+# All-In-One
 #!tag=YouTube,SoundCloud,Spotify,Truecaller,Locket,Adblock,PiP
 # 🚀 Merged by: tvh-122 All-in-One
 
@@ -62,10 +62,4 @@ deleteHeader = type=http-request, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(
 # MITM / Hostnames (gộp)
 # -------------------------
 [MITM]
-# Append existing hostnames; giữ %APPEND% để không phá các host mặc định của cấu hình bạn đang dùng
-hostname = %APPEND% -redirector*.googlevideo.com,*.googlevideo.com,www.youtube.com,s.youtube.com,youtubei.googleapis.com,api-mobile.soundcloud.com,spclient.wg.spotify.com,premium*.truecaller.com,api.revenuecat.com,raw.githubusercontent.com
-
-# -------------------------
-# -------------------------
-
-# End of tvh-122 All-in-One
+# Append existing hostnames; giữ %APPEND% để không phá các host mặc định của cấu hình bIn-One
