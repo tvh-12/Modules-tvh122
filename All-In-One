@@ -7,6 +7,12 @@
 AND,((DOMAIN-SUFFIX,googlevideo.com),(PROTOCOL,UDP)),REJECT
 AND,((DOMAIN,youtubei.googleapis.com),(PROTOCOL,UDP)),REJECT
 
+[General]
+bypass-system = true
+skip-proxy = localhost, *.local
+dns-server = system
+ipv6 = false
+
 [Header Rewrite]
 ^https?://api.revenuecat.com/.+/(receipts$|subscribers/?(.*?)*$) header-del x-revenuecat-etag
 ^https?://api.revenuecat.com/.+/(receipts$|subscribers/?(.*?)*$) header-del X-RevenueCat-ETag
@@ -121,8 +127,12 @@ Snow = type=http-response, pattern=^https?:\/\/user-snow-api\.snow\.me\/v\d\/pur
 Meitu = type=http-response,pattern=^https?:\/\/(h5|api)\.xiuxiu\.meitu\.com\/v\d\/(h\d\/vip|vip|user)\/,requires-body=1,script-path=https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/MeiTuXiuXiu.js
 #************************************#
 
+#Adguard
+Adguard = type=http-response, pattern=^https:\/\/mobile-api\.adguard\.org\/api\/.+\/ios_validate_receipt\/(.*?), enable=true, script-path=https://raw.githubusercontent.com/km1410/adguard_dns_script/refs/heads/main/Adguard.js, requires-body=true, max-size=131072, timeout=10
+
 [Map Local]
 ^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad data-type=text data="" status-code=200
 
 [MITM]
-hostname = %APPEND%, *.googlevideo.com, youtubei.googleapis.com, www.youtube.com, s.youtube.com, -redirector*.googlevideo.com, premium*.truecaller.com, sub.store, api.revenuecat.com, api.rc-backup.com, buy.itunes.apple.com, spclient.wg.spotify.com, *spclient.spotify.com, api-mobile.soundcloud.com, api.picsart.com, us-central1-alight-creative.cloudfunctions.net, api-sub.meitu.com, photos.adobe.io, , ap*.intsig.net, api-account.kinemasters.com, api.mr.pixocial.com, newbeee-api.beautyplus.com, user-snow-api.snow.me, h5.xiuxiu.meitu.com, api.xiuxiu.meitu.com
+enable = true
+hostname = %APPEND%, *.googlevideo.com, youtubei.googleapis.com, www.youtube.com, s.youtube.com, -redirector*.googlevideo.com, premium*.truecaller.com, sub.store, api.revenuecat.com, api.rc-backup.com, buy.itunes.apple.com, spclient.wg.spotify.com, *spclient.spotify.com, api-mobile.soundcloud.com, api.picsart.com, us-central1-alight-creative.cloudfunctions.net, api-sub.meitu.com, photos.adobe.io, , ap*.intsig.net, api-account.kinemasters.com, api.mr.pixocial.com, newbeee-api.beautyplus.com, user-snow-api.snow.me, h5.xiuxiu.meitu.com, api.xiuxiu.meitu.com, mobile-api.adguard.org
