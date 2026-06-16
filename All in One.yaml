@@ -1,10 +1,6 @@
-#!name=NightmarketServer Collection 2027
 #!desc=Tổng hợp module chặn quảng cáo & mở khoá premium cho YouTube, Wink, Meitu, Spotify, SoundCloud, Locket, Lightroom
 #!tag=All-in-One, Premium Unlock, Adblock, Nightmarket
-# 👤 Author: @Nightmarket Server  
-# 💬 Discord: https://discord.gg/juY9tw5AJY  
-# 🚀 Web Module: https://nightmarket.store
-
+#Author: @tvh-12
 
 proxy-providers: {}
 proxies: []
