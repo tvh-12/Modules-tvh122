@@ -1,6 +1,7 @@
 #!desc=Tổng hợp module chặn quảng cáo & mở khoá premium cho YouTube, Wink, Meitu, Spotify, SoundCloud, Locket, Lightroom
 #!tag=All-in-One, Premium Unlock, Adblock, Nightmarket
 #Author: @tvh-12
+#Github: https://github.com/tvh-12
 
 proxy-providers: {}
 proxies: []
