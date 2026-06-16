@@ -7,7 +7,7 @@ proxy-providers: {}
 proxies: []
 
 proxy-groups:
-  - name: NightmarketServer - Bôngsusu
+  - name: Thanhyeumy
     type: select
     proxies:
       - DIRECT
